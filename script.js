@@ -28,10 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
       img.style.maxWidth = "200px";
       img.style.marginBottom = "10px";
       card.appendChild(img);
-    }
+    } 
 
     // Add text info
-    card.innerHTML += `
+    card.innerHTML += ` 
+    <br>
       <strong>Type:</strong> ${type.charAt(0).toUpperCase() + type.slice(1)}<br>
       <strong>Item:</strong> ${itemName}<br>
       <strong>Description:</strong> ${description}<br>
