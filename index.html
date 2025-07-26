@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Lost & Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <h1>Campus Lost & Found Portal</h1>
+        <p>A simple way to report or find lost items on campus.</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+  <h2>Submit a Lost or Found Item</h2>
+  <form id="itemForm">
+    <label for="type">Type:</label>
+    <select id="type" name="type" required>
+      <option value="">--Select--</option>
+      <option value="lost">Lost</option>
+      <option value="found">Found</option>
+    </select>
+
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" placeholder="e.g. Wallet, Phone" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" placeholder="Add more details..." required></textarea>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" placeholder="Where it was lost/found" required>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="contact">Your Contact Info:</label>
+    <input type="text" id="contact" name="contact" placeholder="Phone or Email" required>
+
+    <label for="image">Upload Image:</label>
+<input type="file" id="image" name="image" accept="image/*">
+
+    <button type="submit">Submit</button>
+  </form>
+  <p id="confirmationMessage" style="display: none; color: green; text-align: center; margin-top: 15px;">
+  Item submitted successfully!
+</p>
+</section>
+<h2>Complaints List</h2>
+<div id="complaints-list"></div>
+    </main>
+
+    <footer>
+        <p>Created by Ayush Sahu | Internship Project</p>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f6f9fc, #eaf4ff);
+  padding: 20px;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Form Section */
+.form-section {
+  max-width: 550px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.form-section:hover {
+  transform: translateY(-2px);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1d4ed8;
+  font-size: 1.6rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #1d4ed8;
+  outline: none;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px;
+  background: #1d4ed8;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #1e40af;
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: 600;
+}
+
+/* Display Section */
+.display-section {
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.display-section h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #1e3a8a;
+}
+
+/* Complaint Cards */
+.complaint-card {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.complaint-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.complaint-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.complaint-card span.label {
+  font-weight: bold;
+  color: #111827;
+}
+
+/* Delete Button */
+.complaint-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.complaint-card button:hover {
+  background-color: #b91c1c;
+}
