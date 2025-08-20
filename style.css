@@ -1,5 +1,5 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600;700&display=swap');
 
 * {
   margin: 0;
@@ -9,163 +9,234 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #f6f9fc, #eaf4ff);
-  padding: 20px;
-  color: #333;
+  background: linear-gradient(135deg, #1f1c2c, #928DAB, #0f2027, #2c5364);
+  background-size: 500% 500%;
+  color: #fff;
   min-height: 100vh;
+  padding: 40px 20px;
+  animation: bgShift 20s ease infinite;
 }
 
-/* Header */
+/* Animated Gradient */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  animation: fadeInDown 1.2s ease;
 }
-
 header h1 {
-  font-size: 2.5rem;
-  color: #1e3a8a;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 4px 30px rgba(255,255,255,0.3);
+  letter-spacing: 2px;
 }
-
 header p {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.2rem;
+  margin-top: 12px;
+  opacity: 0.85;
 }
 
-/* Form Section */
+/* FORM SECTION */
 .form-section {
-  max-width: 550px;
+  max-width: 650px;
   margin: 0 auto;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4),
+              inset 0 2px 6px rgba(255,255,255,0.2);
+  animation: fadeInUp 1.3s ease;
+  transition: all 0.3s ease;
 }
-
 .form-section:hover {
-  transform: translateY(-2px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
-
 .form-section h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #1d4ed8;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Form Styles */
+/* FORM INPUTS */
 form {
   display: flex;
   flex-direction: column;
+  gap: 18px;
 }
-
 label {
-  margin: 10px 0 5px;
   font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #f0f0f0;
 }
-
 input, select, textarea {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #fff;
-  transition: border 0.3s;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #1d4ed8;
-  outline: none;
-}
-
-input[type="file"] {
-  margin: 10px 0;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-button[type="submit"] {
-  margin-top: 20px;
-  padding: 12px;
-  background: #1d4ed8;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 14px 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 14px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.25),
+              inset -2px -2px 6px rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+input[type="file"] {
+  background: rgba(255,255,255,0.1);
+  border: 2px dashed rgba(255,255,255,0.4);
   cursor: pointer;
-  transition: background 0.3s;
 }
 
+/* BUTTON */
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #ff512f, #dd2476, #24c6dc);
+  background-size: 300% 300%;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  animation: gradientBtn 6s infinite alternate;
+}
 button[type="submit"]:hover {
-  background: #1e40af;
+  transform: translateY(-3px) scale(1.04);
 }
 
-/* Confirmation Message */
+/* Button Gradient Animation */
+@keyframes gradientBtn {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* CONFIRMATION MESSAGE */
 #confirmationMessage {
   margin-top: 15px;
   text-align: center;
-  color: green;
-  font-weight: 600;
-}
-
-/* Display Section */
-.display-section {
-  max-width: 900px;
-  margin: 50px auto 0;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-}
-
-.display-section h3 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-  color: #1e3a8a;
-}
-
-/* Complaint Cards */
-.complaint-card {
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background: #f8fafc;
-  transition: all 0.2s ease;
-}
-
-.complaint-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-}
-
-.complaint-card p {
-  margin: 8px 0;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.complaint-card span.label {
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #111827;
+  color: #90ee90;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }
 
-/* Delete Button */
-.complaint-card button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #dc2626;
+/* DISPLAY SECTION */
+.display-section {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  padding: 35px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  animation: fadeInUp 1.3s ease;
+}
+.display-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* COMPLAINT CARD */
+.complaint-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+.complaint-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+.complaint-card p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #f9f9f9;
+}
+
+/* IMAGE INSIDE CARD */
+.complaint-card img {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.complaint-card img:hover {
+  transform: scale(1.05);
+}
+
+/* DELETE BUTTON */
+.complaint-card button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ff0844, #ff416c);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
 .complaint-card button:hover {
-  background-color: #b91c1c;
+  transform: scale(1.07);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #ddd;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+  animation: fadeInUp 1.5s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
